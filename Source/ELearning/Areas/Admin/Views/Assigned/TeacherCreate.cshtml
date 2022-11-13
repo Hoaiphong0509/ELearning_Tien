@@ -54,13 +54,13 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="control-label">Ngày bắt đầu</label>
-                                                @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "form-control", @required = "required", @type = "date" } })
+                                                @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "form-control", @required = "required", @type = "date", @min = DateTime.Now.ToString("yyyy-MM-dd") } })
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="control-label">Ngày kết thúc</label>
-                                                @Html.EditorFor(model => model.FinishTime, new { htmlAttributes = new { @class = "form-control", @required = "required", @type = "date" } })
+                                                @Html.EditorFor(model => model.FinishTime, new { htmlAttributes = new { @class = "form-control", @required = "required", @type = "date", @min = DateTime.Now.ToString("yyyy-MM-dd") } })
                                             </div>
                                         </div>
                                     </div>

@@ -129,8 +129,8 @@
         $('#rate').on('change', function () {
             rate($("#courseId").val(), $(this).val());
         });
-
         function rate(_courseId, _point) {
+            const p = parseFloat(_point).toFixed(0)
             $.ajax({
                 type: 'POST',
                 url: '/course/rate',
@@ -138,7 +138,7 @@
                 data:
                 {
                     courseId: _courseId,
-                    point: _point
+                    point: p
                 },
                 success: function (response) {
                     if (response.status) {
